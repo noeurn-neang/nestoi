@@ -1,0 +1,47 @@
+{
+  "name": "nestoi",
+  "version": "1.0.1",
+  "description": "nestoi is a powerful Node.js library that combines the simplicity of Express and the robustness of Swagger to help you set up your Node.js projects faster. With nestoi, you'll be development-ready in no time, allowing you to focus on building your application without getting bogged down in setup tasks.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon"
+  },
+  "engines": {
+    "node": ">= 20.9 < 21"
+  },
+  "keywords": [
+    "nestoi",
+    "node",
+    "express",
+    "swagger",
+    "resful"
+  ],
+  "author": "Mr. Neang",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "joi": "^17.12.2",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/joi": "^17.2.3",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.11.20",
+    "@types/swagger-ui-express": "^4.1.6",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.57.0",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
