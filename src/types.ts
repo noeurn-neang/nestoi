@@ -109,7 +109,6 @@ interface OAuthFlow {
 
 export interface ISwagger {
   disabled?: boolean;
-  limit?: number;
   servers?: string[];
   securitySchemes?: SecuritySchemes;
   openapiVersion?: string;
