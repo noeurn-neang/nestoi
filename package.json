@@ -10,6 +10,10 @@
   "engines": {
     "node": ">= 20.9 < 21"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noeurn-neang/nestoi.git"
+  },
   "keywords": [
     "nestoi",
     "node",
@@ -43,5 +47,9 @@
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/noeurn-neang/nestoi/issues"
+  },
+  "homepage": "https://github.com/noeurn-neang/nestoi#readme"
 }
