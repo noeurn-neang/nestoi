@@ -1,4 +1,3 @@
-import { ISchema } from '../types';
 import {
   ArraySchema,
   ObjectSchema,

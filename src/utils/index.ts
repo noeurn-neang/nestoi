@@ -23,13 +23,13 @@ export const validateQuery = (schema: Joi.ObjectSchema<any>) => {
   return function (req: Request, res: Response, next: NextFunction) {
     const { error } = schema.validate(req.query);
     if (error) {
-      return res.status(400).json({
+      res.status(400).json({
         success: 0,
         msg: error.message,
       });
+    } else {
+      next();
     }
-
-    next();
   };
 };
 
@@ -44,12 +44,12 @@ export const validateBody = (schema: Joi.ObjectSchema<any>) => {
   return function (req: Request, res: Response, next: NextFunction) {
     const { error } = schema.validate(req.body);
     if (error) {
-      return res.status(400).json({
+      res.status(400).json({
         success: 0,
         msg: error.message,
       });
+    } else {
+      next();
     }
-
-    next();
   };
 };

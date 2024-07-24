@@ -1,4 +1,4 @@
-import express, { Express, Response, Request } from 'express';
+import express, { Response, Request } from 'express';
 import _rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import cors from 'cors';
@@ -12,7 +12,7 @@ import { extractAppConfig } from './api-docs';
  *
  * @params configs {IAppConfig} - nestoi configations
  *
- * @returns {Express} app
+ * @returns
  */
 const nestoi = (
   configs: IAppConfig = {
@@ -21,7 +21,7 @@ const nestoi = (
       disabled: false,
     },
   },
-): Express => {
+) => {
   const { title, routePrefix, logFormat, middlewares, rateLimit, swagger } =
     configs;
 
@@ -68,7 +68,7 @@ const nestoi = (
   }
 
   // Starter route that can naviate to api docs
-  app.get('/', (req: Request, res: Response) => {
+  app.get('/', (_: Request, res: Response) => {
     res.send(`
       <center>
         <br />
