@@ -54,30 +54,6 @@ nestoi({
 });
 ```
 
-### Configuration
-```ts
-   export interface IAppConfig {
-      title?: string; // Your restful api title
-      description?: string; // Your restful api description
-      version?: string; // Your restful api version
-      routeTags?: IRouteTag[]; // Your application routes
-      routePrefix?: string; // Route prefix like /v1 or /v2
-      joiSchemas?: Record<string, any>; // Your entired application joi schema
-      rateLimit?: {
-         limitTime: number; // Your limit time for rate limit example only 100 request in 15 minutes.
-         limit: number; // Number of request for above limit time.
-      };
-      middlewares?: RequestHandler[];
-      logFormat?: 'combined' | 'common' | 'dev' | 'short' | 'tiny';
-      swagger?: {
-         disabled?: boolean; // Disabeld or enabled your swagger api document
-         servers?: string[]; // Your swagger api servers like localhost, uat or production servers
-         securitySchemes?: SecuritySchemes; // Your swagger api security schemes like bearerAuth, apiKey or oauth2
-         openapiVersion?: string; // Your openapi version like '3.0.0'
-      };
-   }
-```
-
 #### 2. Routes
 Setup your whole application routes here to make available in swagger document and joi valdiation
 ```ts
@@ -229,6 +205,30 @@ export const dob = Joi.string()
   .example('2000-01-25');
 
 export const isActive = Joi.boolean().description('Is Active').example(true);
+```
+
+### Configuration
+```ts
+   export interface IAppConfig {
+      title?: string; // Your restful api title
+      description?: string; // Your restful api description
+      version?: string; // Your restful api version
+      routeTags?: IRouteTag[]; // Your application routes
+      routePrefix?: string; // Route prefix like /v1 or /v2
+      joiSchemas?: Record<string, any>; // Your entired application joi schema
+      rateLimit?: {
+         limitTime: number; // Your limit time for rate limit example only 100 request in 15 minutes.
+         limit: number; // Number of request for above limit time.
+      };
+      middlewares?: RequestHandler[];
+      logFormat?: 'combined' | 'common' | 'dev' | 'short' | 'tiny';
+      swagger?: {
+         disabled?: boolean; // Disabeld or enabled your swagger api document
+         servers?: string[]; // Your swagger api servers like localhost, uat or production servers
+         securitySchemes?: SecuritySchemes; // Your swagger api security schemes like bearerAuth, apiKey or oauth2
+         openapiVersion?: string; // Your openapi version like '3.0.0'
+      };
+   }
 ```
 
 ## Conclusion
