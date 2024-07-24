@@ -231,6 +231,9 @@ export const isActive = Joi.boolean().description('Is Active').example(true);
    }
 ```
 
+### Nestoi Example Project Boilerplate
+Here: https://github.com/noeurn-neang/nestoi-boilerplate
+
 ## Conclusion
 
 Nestoi is the perfect tool for developers looking to quickly set up an Express application with built-in security features and automatic API documentation. With its intuitive design and powerful features, Nestoi enhances productivity and ensures your application follows industry best practices.
